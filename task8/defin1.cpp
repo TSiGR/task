@@ -10,7 +10,7 @@ void Task::solution_1()
 {
     int b_size = 0;
     int a[10] = {1, 6, 9, 18, 27, 36, 51, 68, 82, 101};
-    int b[b_size];
+    int b[1];
     for (int i = 0; i < 10; ++i)
     {
         if (a[i] % 2 == 0)
@@ -98,7 +98,7 @@ void Task::solution_3()
             }
             std::cin.ignore(32767, '\n');
         }
-        std::vector<char>::iterator iter = chos_word.begin();
+        auto iter = chos_word.begin();
         for (auto& item : words[chos_number])
         { 
             if (chos_letter == item && *iter == '_')
@@ -172,7 +172,7 @@ void Task::make_converse(std::ifstream& content, std::vector<int>& number)
 void Task::delete_converse(std::ifstream& content, std::ofstream& content_new, std::vector<int>& number)
 {
     std::string conv;
-    std::vector<int>::iterator iter = number.begin();
+    auto iter = number.begin();
     while (content >> conv)
     {
         int item;
